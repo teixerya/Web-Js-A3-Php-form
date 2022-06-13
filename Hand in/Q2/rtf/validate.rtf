@@ -1,0 +1,74 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red255\green255\blue255;\red38\green38\blue38;
+\red117\green117\blue117;\red149\green149\blue149;\red39\green39\blue38;}
+{\*\expandedcolortbl;;\cssrgb\c20022\c20022\c19997;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c20044\c20044\c19994;
+\cssrgb\c53231\c53231\c53231;\cssrgb\c65058\c65058\c65058;\cssrgb\c20066\c20066\c19991;}
+\margl1440\margr1440\vieww19460\viewh17420\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48 \cf2 \cb3 \expnd0\expndtw0\kerning0
+validate.php\
+\
+<!-- This is "validate.php" file.Please copy and create a php file named "validate.php"-->\
+\
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"\
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />\
+\
+<div class="container p-5"><a href="form.php"><button class="btn btn-primary my-5">Back to Forms</button></a>\
+<?php \
+$username = $_POST["username"];\
+$email1 = $_POST["email1"];\
+$email2 = $_POST["email2"];\
+$pass1 = $_POST["pass1"];\
+$pass2 = $_POST["pass2"];\
+\
+\cf4 \cb5 if (isset($username)\
+&& isset($pass1)\
+&& isset($pass2)\
+&& isset($email1)\
+&& isset($email2)\cf2 \cb3 \
+\cf4 \cb6 &&$username!=""&&$email1!\cf7 \cb6 =""\cf4 \cb6 &&$email2!=""&&$pass1!=""&&$pass2!="") \{\
+    function confirmthevalues($value,$confirmvalue)\
+    \{   if($value == $confirmvalue)\{return 1; \}\
+    return 0;\
+    \}\cf2 \cb3 \
+    \
+    $username = stripslashes($username);\
+    $email1 =  stripslashes($email1);\
+    $email2 =  stripslashes($email2); \
+    $pass1 =   stripslashes($pass1);\
+    $pass2 =   stripslashes($pass2);\
+    if (confirmthevalues($pass1,$pass2)&&confirmthevalues($email1,$email2))\{\
+        ?><div class="container"><div class="card">\
+        <div class="card-body text-center">\
+          <h4 class="card-title">Entered Data</h4>\
+          <p class="card-text">Username:  <?php echo "$username" ?></p>\
+          <p class="card-text">Email:  <?php echo "$email1" ?></p>\
+          <p class="card-text">Password:  <?php echo "$pass1" ?></p>\
+          <a href="form.php" class="btn btn-success">Final Submit</a>\
+          \
+        </div>\
+      </div><?php     \
+\
+\
+\cf4 \cb6     \}else\{\
+        if (!confirmthevalues($pass1,$pass2))\{\
+            ?><div class="alert alert-danger" role="alert">Password doesnt match!</div><?php\
+        \}\
+\
+        if (!confirmthevalues($email1,$email2))\{\
+            ?> <div class="alert alert-danger" role="alert">Email doesnt match!</div><?php\
+        \}\
+        \}\
+\}\cf2 \cb3 \
+else\{\
+?> \
+    <div class="alert alert-danger" role="alert">\
+    One or more fields are empty!\
+    </div>\
+<?php\
+\}\
+?>\
+</div>}

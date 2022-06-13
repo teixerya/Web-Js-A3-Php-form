@@ -1,0 +1,64 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red255\green255\blue255;\red0\green0\blue0;
+\red117\green117\blue117;\red38\green38\blue38;\red149\green149\blue149;}
+{\*\expandedcolortbl;;\cssrgb\c20022\c20022\c19997;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c0\c0\c0;
+\cssrgb\c53231\c53231\c53231;\cssrgb\c20044\c20044\c19994;\cssrgb\c65058\c65058\c65058;}
+\margl1440\margr1440\vieww25820\viewh18820\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48 \cf2 \cb3 \expnd0\expndtw0\kerning0
+form.php\
+<!-- This is "form.php" file. Please copy and create a php file named "form.php"-->\
+\
+<!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <!-- bootstrapcdn -->\
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"\
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />\
+    <title>Form</title>\
+\cf4 \cb5 </head>\
+<body>\
+    <div class="container  p-5 my-5">\
+        <h1 class="pb-3">Form</h1>\
+        <div>\cf2 \cb3 \
+            <form action="validate.php" method="post">\
+                <div class="">\
+                    <label class="sr-only" for="inlineFormInputGroup">Username</label>\
+                    <div class="input-group mb-2">\
+                        <div class="input-group-prepend">\
+                        <div class="input-group-text">@</div>\
+                        </div>\
+\cf6 \cb7                         <input type="text" name="username" class="form-control" id="inlineFormInputGroup" placeholder="Username">\
+                    </div>\cf2 \cb3 \
+                </div>\
+                <div class="form-group">\
+\cf6 \cb7                     <label for="exampleInputEmail1">Email address</label>\
+                    <input type="email" name="email1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">\
+                    <small id="emailHelp" class="form-text text-muted">Example: someone@yourmail.com.</small>\
+                </div>\cf2 \cb3 \
+                <div class="form-group">\
+                    \cf6 \cb7 <label for="exampleInputEmail2">Confirm Email address</label>\
+                    <input type="email" name="email2" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Confirm email">\
+                    <small id="emailHelp" class="form-text text-muted">Example: someone@yourmail.com.</small>\
+                </div>\
+                <div class="form-group">\cf2 \cb3 \
+                    \cf6 \cb7 <label for="exampleInputPassword1">Password</label>\
+                    <input type="password" name="pass1" class="form-control" id="exampleInputPassword1" placeholder="Password">\
+                </div>\
+                <div class="form-group">\
+                    <label for="exampleInputPassword2">Confirm Password</label>\
+                    <input type="password" name="pass2" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">\cf2 \cb3 \
+                </div>\
+                <div class="text-center py-3"><button type="submit" class="btn btn-primary mb-2">Submit</button></div>\
+                \
+            </form>\
+        </div>\
+    </div>\
+    \
+</body>\
+</html>}
